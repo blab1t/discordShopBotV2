@@ -1,0 +1,27 @@
+# The project root has collected a number of zero-byte files from mistyped
+# shell redirects, so the root is a whitelist: ignore everything, then add back
+# only the real project entries. Anything new at the root must be listed here
+# on purpose, which also stops a stray .env.serverN from ever being committed.
+/*
+
+!/.gitignore
+!/README.md
+!/package.json
+!/package-lock.json
+!/ecosystem.config.js
+!/.env.example
+!/src/
+!/tests/
+!/scripts/
+!/data/
+
+# Runtime state and dependencies.
+node_modules/
+data/*
+!data/capes.json
+
+# Secrets. Each PM2 instance has its own .env.serverN on the host; none of them
+# and no .env ever belong in the repo.
+.env
+.env.*
+!/.env.example

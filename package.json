@@ -1,0 +1,19 @@
+{
+  "name": "discord-shop-bot-v2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Non-destructive Minecraft account shop bot with proxy imports, TicketsBot takeovers and vouch recounting",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "discord.js": "^14.26.4",
+    "dotenv": "^16.4.5",
+    "jimp": "^1.6.0"
+  }
+}
